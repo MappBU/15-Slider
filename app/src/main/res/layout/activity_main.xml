@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
+            android:layout_width="336dp"
+            android:layout_height="200dp"
+            android:layout_margin="20dp"
+            android:checkable="true"
+            android:focusable="true"
+            app:cardElevation="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/orange"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/baner">
+
+                <Button
+                    android:id="@+id/containedIconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/orange"
+                    android:text="@string/play"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"
+                    android:padding="10dp"
+                    android:text="@string/badBoys"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/headerSelectPart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/headerPart"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card" />
+
+        <!--android:stepSize="1" - шаг слайдера 1
+        android:valueFrom="1" - стартовое значение слайдера
+        android:valueTo="3" - максимальное значение слайдера
+        app:trackColorActive - цвет пространства от 1 до выбранного
+        app:tickColorInactive - цвет остальной части шкалы
+        app:thumbColor - цвет тумба, который ездит по шкале
+        app:trackColor - окрашивает всю шкалу (Приоритетный)
+        app:tickColorInactive - цвет деления шкалы (Невыбранной)
+        app:tickColorActive - цвет деления шкалы (Выбранный)-->
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:stepSize="1"
+            android:valueFrom="1"
+            android:valueTo="3"
+            app:layout_constraintTop_toBottomOf="@id/headerSelectPart"
+            app:thumbColor="@android:color/holo_orange_dark"
+            app:tickColorActive="@color/orange"
+            app:tickColorInactive="@android:color/black"
+            app:trackColorActive="@android:color/holo_orange_dark"
+            app:trackColorInactive="@android:color/darker_gray" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/selectedPart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/slider" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/descSelectedPart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/selectedPart" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

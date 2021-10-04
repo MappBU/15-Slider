@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CheckBox</string>
+    <string name="play">PLAY</string>
+    <string name="badBoys">BAD BOYS</string>
+    <string name="headerPart">Выберите серию</string>
+    <string name="yourSelected">Вы выбрали</string>
+    <string name="series">серию</string>
+    <string name="action">Идет выбор</string>
+    <string name="beforeAction">Фильм доступен</string>
+</resources>
