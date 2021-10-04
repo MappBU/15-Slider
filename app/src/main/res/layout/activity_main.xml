@@ -73,15 +73,17 @@
         app:thumbColor - цвет тумба, который ездит по шкале
         app:trackColor - окрашивает всю шкалу (Приоритетный)
         app:tickColorInactive - цвет деления шкалы (Невыбранной)
-        app:tickColorActive - цвет деления шкалы (Выбранный)-->
-        <com.google.android.material.slider.Slider
+        app:tickColorActive - цвет деления шкалы (Выбранный)
+        app:values - устанавливает Тумбы по умолчанию-->
+        <com.google.android.material.slider.RangeSlider
             android:id="@+id/slider"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:stepSize="1"
             android:valueFrom="1"
-            android:valueTo="3"
+            android:valueTo="10"
+            app:values="@array/initial_slider_values"
             app:layout_constraintTop_toBottomOf="@id/headerSelectPart"
             app:thumbColor="@android:color/holo_orange_dark"
             app:tickColorActive="@color/orange"
